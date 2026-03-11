@@ -1,5 +1,5 @@
 %clc;
-function [outputLog] = digitalMicDataTool()
+function [outputLog] = digitalMicDataTool(CM)
     outputLog = ' digi2excelLog: \n';
     
     %% read
@@ -51,13 +51,15 @@ function [outputLog] = digitalMicDataTool()
     
         theWidth = max(width(data), width(singleItem));                        % concat all test items
         AA = extendArray(data, theWidth);
-        BB = extendArray(singleItem, theWidth);
+        BB = extendArray(singleItem, theWidth);   
         data = [AA; BB];
     end
     
     %% save
     data(1, :) = [];
-    writematrix(data, "data.csv");
+    data(1, 1) = CM;    % add CM factory info
+    writematrix(data, [CM, '_data.csv']);
+    outputLog = [outputLog, 'DataSavedTo:   ', [CM, '_data.csv'], '\n'];
     
     %% func
     function B = extendArray(inputArray, theWidth)
