@@ -22,16 +22,14 @@ function [outputLog] = digitalMicDataTool(CM)
         for allItem = 1: width(rawData)
             if contains(rawData(2, allItem), headers(item, 1))
                 itemHead = split(rawData(2, allItem), "@");
-                if contains(itemHead(1), 'Sens') % compatible with sens & tone
-                    if length(itemHead) ~= 1 
+                if contains(itemHead(1), {'Sens','tone'}) % compatible with sens & tone
+                    if length(itemHead) ~= 1 % tone abnormal data
                         continue
                     end
                     itemHead = [itemHead, itemHead];
-                elseif contains(itemHead(1), 'tone')
-                    if length(itemHead) ~= 1  % tone abnormal data
-                        continue
-                    end
-                    itemHead = [itemHead, itemHead];
+                elseif strcmp(itemHead(1), headers(item, 1))
+                else
+                    continue 
                 end
                 dataColumn = rawData(8:height(rawData), allItem);
                 dataColumn = [itemHead(2); dataColumn];
@@ -64,8 +62,10 @@ function [outputLog] = digitalMicDataTool(CM)
     %% save
     data(1, :) = [];
     data(1, 1) = CM;    % add CM factory info
-    writematrix(data, [CM, '_data.csv']);
-    outputLog = [outputLog, 'DataSavedTo:   ', [CM, '_data.csv'], '\n'];
+    timing = datestr(now, 'yyyy-mm-dd_HH:MM:SS');
+    fileName = [CM, '_data_', timing, '.csv'];
+    writematrix(data, fileName);
+    outputLog = [outputLog, 'DataSavedTo:   ', fileName, '\n'];
     
     %% func
     function B = extendArray(inputArray, theWidth)
