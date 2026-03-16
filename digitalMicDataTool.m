@@ -22,9 +22,15 @@ function [outputLog] = digitalMicDataTool(CM)
         for allItem = 1: width(rawData)
             if contains(rawData(2, allItem), headers(item, 1))
                 itemHead = split(rawData(2, allItem), "@");
-                if contains(itemHead, 'Sens') % compatible with sens & tone
+                if contains(itemHead(1), 'Sens') % compatible with sens & tone
+                    if length(itemHead) ~= 1 
+                        continue
+                    end
                     itemHead = [itemHead, itemHead];
-                elseif contains(itemHead, 'tone')
+                elseif contains(itemHead(1), 'tone')
+                    if length(itemHead) ~= 1  % tone abnormal data
+                        continue
+                    end
                     itemHead = [itemHead, itemHead];
                 end
                 dataColumn = rawData(8:height(rawData), allItem);
