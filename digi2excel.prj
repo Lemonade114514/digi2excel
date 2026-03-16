@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3053172906" file="/Users/lemonade/Desktop/digi2excel/digi2excel.prj" location="/Users/lemonade/Desktop/digi2excel" name="digi2excel" preferred-package-location="/Users/lemonade/Desktop/digi2excel/_output" preferred-package-type="package.type.app" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="567348358" file="/Users/lemonade/Desktop/digi2excel/digi2excel.prj" location="/Users/lemonade/Desktop/digi2excel" name="digi2excel" preferred-package-location="/Users/lemonade/Desktop/digi2excel/digi2excel/_output/for_redistribution" preferred-package-type="package.type.app" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>digi2excel</param.appname>
     <param.icon>${PROJECT_ROOT}/digi2excel_resources/icon.icns</param.icon>
     <param.icons>
@@ -8,13 +8,13 @@
       <file>${PROJECT_ROOT}/digi2excel_resources/icon_24.png</file>
       <file>${PROJECT_ROOT}/digi2excel_resources/icon_16.png</file>
     </param.icons>
-    <param.version>1.2.2</param.version>
+    <param.version>1.2.3</param.version>
     <param.authnamewatermark>Lemonade</param.authnamewatermark>
     <param.email />
     <param.company />
     <param.summary />
     <param.description />
-    <param.screenshot />
+    <param.screenshot>${PROJECT_ROOT}/48x48.png</param.screenshot>
     <param.guid />
     <param.installpath.string>/digi2excel/</param.installpath.string>
     <param.installpath.combo>option.installpath.systemwideapp</param.installpath.combo>
@@ -29,16 +29,16 @@ MR/v912/runtime/maci64:MR/v912/sys/os/maci64:MR/v912/bin/maci64
 If it is defined, set it to the following:
 
 ${DYLD_LIBRARY_PATH}:MR/v912/runtime/maci64:MR/v912/sys/os/maci64:MR/v912/bin/maci64</param.target.install.notes>
-    <param.intermediate>${PROJECT_ROOT}/digi2excel/_output/for_testing</param.intermediate>
-    <param.files.only>${PROJECT_ROOT}/digi2excel/_output/for_redistribution_files_only</param.files.only>
-    <param.output>${PROJECT_ROOT}/digi2excel/_output/for_redistribution</param.output>
+    <param.intermediate>${PROJECT_ROOT}/_output/for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}/_output/for_redistribution_files_only</param.files.only>
+    <param.output>/Users/lemonade/Desktop/digi2excel_output/for_redistribution</param.output>
     <param.logdir>${PROJECT_ROOT}/_output/digi2excel</param.logdir>
     <param.enable.clean.build>false</param.enable.clean.build>
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
     <param.support.packages />
-    <param.web.mcr>false</param.web.mcr>
-    <param.package.mcr>true</param.package.mcr>
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
     <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
     <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
@@ -60,7 +60,6 @@ ${DYLD_LIBRARY_PATH}:MR/v912/runtime/maci64:MR/v912/sys/os/maci64:MR/v912/bin/ma
       <param.company />
       <param.summary />
       <param.description />
-      <param.screenshot />
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
@@ -70,6 +69,8 @@ ${DYLD_LIBRARY_PATH}:MR/v912/runtime/maci64:MR/v912/sys/os/maci64:MR/v912/bin/ma
       <param.user.defined.mcr.options />
       <param.target.type />
       <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
       <param.no.mcr />
       <param.web.mcr.name />
       <param.package.mcr.name />
@@ -90,10 +91,10 @@ ${DYLD_LIBRARY_PATH}:MR/v912/runtime/maci64:MR/v912/sys/os/maci64:MR/v912/bin/ma
       <file>${PROJECT_ROOT}/digitalMicDataTool.m</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}/digi2excel/_output/for_testing" name="readme.txt" optional="true">/Users/lemonade/Desktop/digi2excel/digi2excel/_output/for_testing/readme.txt</file>
-      <file location="${PROJECT_ROOT}/digi2excel/_output/for_testing" name="digi2excel.app" optional="false">/Users/lemonade/Desktop/digi2excel/digi2excel/_output/for_testing/digi2excel.app</file>
-      <file location="${PROJECT_ROOT}/digi2excel/_output/for_testing" name="run_digi2excel.sh" optional="false">/Users/lemonade/Desktop/digi2excel/digi2excel/_output/for_testing/run_digi2excel.sh</file>
-      <file location="${PROJECT_ROOT}/digi2excel/_output/for_testing" name="splash.png" optional="false">/Users/lemonade/Desktop/digi2excel/digi2excel/_output/for_testing/splash.png</file>
+      <file location="${PROJECT_ROOT}/_output/for_testing" name="digi2excel.app" optional="false">/Users/lemonade/Desktop/digi2excel/_output/for_testing/digi2excel.app</file>
+      <file location="${PROJECT_ROOT}/_output/for_testing" name="readme.txt" optional="true">/Users/lemonade/Desktop/digi2excel/_output/for_testing/readme.txt</file>
+      <file location="${PROJECT_ROOT}/_output/for_testing" name="run_digi2excel.sh" optional="false">/Users/lemonade/Desktop/digi2excel/_output/for_testing/run_digi2excel.sh</file>
+      <file location="${PROJECT_ROOT}/_output/for_testing" name="splash.png" optional="false">/Users/lemonade/Desktop/digi2excel/_output/for_testing/splash.png</file>
     </build-deliverables>
     <workflow />
     <matlab>
