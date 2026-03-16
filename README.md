@@ -9,8 +9,7 @@ digi2excel matlab app for ose digital mic project report making. (actually for t
 |v1.2.2(ver260311)|1. add clearLog button; 2. add CM button; 3. add CM info to csv; 4. add more logging|
 
 # How to use this app
-1. Headers.csv for all the items (change freely)
-2. rawData.csv for the rawData need to clean (should be osens digitalMic data)
-3. all files should be in same folder
-4. launch digitalMicTool.m with matlab r2022a to make data.csv
-5. digitalMicDataTool.py is semi-finished and not for use
+1. "Headers.csv" for all the items (change freely)
+2. "rawData.csv" for the rawData need to clean (should be osens digitalMic data)
+3. Headers.csv and rawData.csv files should be in same folder
+4. launch "digi2excel.app" with "matlab r2022a runtime engine" to make data.csv
