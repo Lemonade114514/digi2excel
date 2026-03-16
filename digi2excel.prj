@@ -8,15 +8,15 @@
       <file>${PROJECT_ROOT}/digi2excel_resources/icon_24.png</file>
       <file>${PROJECT_ROOT}/digi2excel_resources/icon_16.png</file>
     </param.icons>
-    <param.version>1.2.4</param.version>
+    <param.version>1.2.4.1</param.version>
     <param.authnamewatermark>Lemonade</param.authnamewatermark>
-    <param.email />
-    <param.company />
-    <param.summary />
-    <param.description />
+    <param.email>1</param.email>
+    <param.company>2</param.company>
+    <param.summary>3</param.summary>
+    <param.description>4</param.description>
     <param.screenshot>${PROJECT_ROOT}/48x48.png</param.screenshot>
     <param.guid />
-    <param.installpath.string>/digi2excel/</param.installpath.string>
+    <param.installpath.string>/2/digi2excel/</param.installpath.string>
     <param.installpath.combo>option.installpath.systemwideapp</param.installpath.combo>
     <param.logo />
     <param.install.notes />
@@ -54,12 +54,10 @@ ${DYLD_LIBRARY_PATH}:MR/v912/runtime/maci64:MR/v912/sys/os/maci64:MR/v912/bin/ma
 	 
  Input Arguments 
 	 -?  print help on how to use the application 
-	 input arguments</param.help.text>
+	 input arguments 
+ Description 
+ 	 4</param.help.text>
     <unset>
-      <param.email />
-      <param.company />
-      <param.summary />
-      <param.description />
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
